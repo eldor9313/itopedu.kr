@@ -10,7 +10,7 @@ export default function Events() {
     <div className={"events-frame"}>
       <Stack className={"events-main"}>
         <Box className={"events-text"}>
-          <span className={"category-title"}>Events</span>
+          <span className={"category-title"}>The Gentleman’s Agenda</span>
         </Box>
 
         <Swiper
@@ -27,7 +27,7 @@ export default function Events() {
             clickable: true,
           }}
           autoplay={{
-            delay: 2000,
+            delay: 2500,
             disableOnInteraction: true,
           }}
         >
