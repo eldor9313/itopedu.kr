@@ -378,12 +378,24 @@ export default function Products(props: ProductsProps) {
       </Container>
 
       <div className={"brands-logo"}>
-        <div className="logo-title">Family Brands</div>
+        <div className="logo-title">Explore Cavalier Stores</div>
         <Stack className={"logo-box"}>
-          <Box className={"logo-img"}></Box>
-          <Box className={"logo-img"}></Box>
-          <Box className={"logo-img"}></Box>
-          <Box className={"logo-img"}></Box>
+          <Box className={"logo-img"}>
+            <img src="/img/Dubai.jpg" alt="" />
+            <Box className={"store-location"}>Dubai Mall, Dubai</Box>
+          </Box>
+          <Box className={"logo-img"}>
+            <img src="/img/Coex1.jpg" alt="" />
+            <Box className={"store-location"}>COEX Mall, Seoul</Box>
+          </Box>
+          <Box className={"logo-img"}>
+            <img src="/img/Gum.jpg" alt="" />
+            <Box className={"store-location"}>GUM, Moscow</Box>
+          </Box>
+          <Box className={"logo-img"}>
+            <img src="/img/Tashkent.jpg" alt="" />
+            <Box className={"store-location"}>Nest One, Tashkent</Box>
+          </Box>
         </Stack>
       </div>
 
@@ -391,7 +403,7 @@ export default function Products(props: ProductsProps) {
         <Container>
           <Stack className={"address-area"}>
             <Box className={"add-box"}>
-              <Box className={"title"}>Store Location</Box>
+              <Box className={"title"}>Head Location</Box>
             </Box>
             <div className={"map-address"}>
               <strong>Address:</strong> COEX Mall, 513 Yeongdong-daero,

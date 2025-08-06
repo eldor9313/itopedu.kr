@@ -179,6 +179,7 @@
   height: 520px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .homepage .new-products-frame .card .card-box {

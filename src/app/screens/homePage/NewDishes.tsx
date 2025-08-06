@@ -12,6 +12,7 @@ import { Product } from "../../../lib/types/product";
 import { serverApi } from "../../../lib/config";
 import { ProductCollection } from "../../../lib/enums/product.enum";
 import CardCover from "@mui/joy/CardCover";
+import { useHistory } from "react-router-dom";
 
 /** REDUX SLICE & SELECTOR **/
 
@@ -31,9 +32,20 @@ function ProductCard({ product }: { product: Product }) {
       ? product.productVolume + "l"
       : product.productSize + " size";
 
+  const history = useHistory();
+
+  const choosenDishHandler = (id: string) => {
+    history.push(`/products/${id}`);
+  };
+
   return (
     <CssVarsProvider>
       <Card
+        key={product._id}
+        onClick={() => {
+          choosenDishHandler(product._id);
+          window.scrollTo({ top: 510 });
+        }}
         className={"card"}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}

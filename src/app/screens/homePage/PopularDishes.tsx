@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { Box, Container, Stack } from "@mui/material";
 import { CssVarsProvider } from "@mui/joy/styles";
 import Card from "@mui/joy/Card";
@@ -8,7 +9,7 @@ import Typography from "@mui/joy/Typography";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import CardOverflow from "@mui/joy/CardOverflow";
-import Tooltip from "@mui/material/Tooltip";
+import { useHistory } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { createSelector } from "reselect";
@@ -23,8 +24,15 @@ const popularDishesRetriever = createSelector(
   (popularDishes) => ({ popularDishes })
 );
 
+// (choosenProduct)
+
 export default function PopularDishes() {
   const { popularDishes } = useSelector(popularDishesRetriever);
+  const history = useHistory();
+
+  const choosenDishHandler = (id: string) => {
+    history.push(`/products/${id}`);
+  };
 
   console.log("popularDishes:", popularDishes);
 
@@ -39,7 +47,14 @@ export default function PopularDishes() {
                 const imagePath = `${serverApi}/${product.productImages[0]}`;
                 return (
                   <CssVarsProvider key={product._id}>
-                    <Card className={"card"}>
+                    <Card
+                      key={product._id}
+                      onClick={() => {
+                        choosenDishHandler(product._id);
+                        window.scrollTo({ top: 510 });
+                      }}
+                      className={"card"}
+                    >
                       <CardCover>
                         <img src={imagePath} alt="" />
                       </CardCover>
