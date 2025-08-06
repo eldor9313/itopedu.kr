@@ -70,7 +70,12 @@ export default function OrdersPage() {
         <Stack className={"order-left"}>
           <TabContext value={value}>
             <Box className={"order-nav-frame"}>
-              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <Box
+                sx={{
+                  borderBottom: 1,
+                  borderColor: "divider",
+                }}
+              >
                 <Tabs
                   value={value}
                   onChange={handleChange}
@@ -158,7 +163,7 @@ export default function OrdersPage() {
 
               <input
                 type="text"
-                placeholder="Jakhongir Artikhujaev"
+                placeholder="Member Name"
                 className="payment-input"
               />
 

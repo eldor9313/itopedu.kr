@@ -139,7 +139,7 @@ export default function PausedOrders(props: PausedOrdersProps) {
                   className={"pay-button"}
                   onClick={processOrderHandler}
                 >
-                  Payment
+                  Buy
                 </Button>
               </Box>
             </Box>

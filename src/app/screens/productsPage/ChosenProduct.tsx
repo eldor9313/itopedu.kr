@@ -126,7 +126,7 @@ export default function ChosenProduct(props: ChosenProductProps) {
             </div>
             <div className={"button-box"}>
               <Button
-                variant="contained"
+                className="shop-btn"
                 onClick={(e) => {
                   onAdd({
                     _id: chosenProduct._id,

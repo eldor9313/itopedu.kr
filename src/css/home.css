@@ -595,6 +595,6 @@
 }
 
 .homepage .events-frame .swiper-pagination-bullet-active {
-  background: #ffffff;
+  background: #000000;
   transform: scale(1.1);
 }

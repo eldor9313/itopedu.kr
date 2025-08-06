@@ -79,7 +79,7 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
                         <p>{item.itemQuantity}</p>
                         <img src={"/icons/pause.svg"} />
                         <p style={{ marginLeft: "15px" }}>
-                          $ ${item.itemQuantity * item.itemPrice}
+                          ${item.itemQuantity * item.itemPrice}
                         </p>
                       </Box>
                     </Box>
@@ -109,7 +109,7 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
                   className={"verify-button"}
                   onClick={finishOrderHandler}
                 >
-                  Verify to Fulfil
+                  Confirm Payment
                 </Button>
               </Box>
             </Box>

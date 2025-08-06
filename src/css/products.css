@@ -197,7 +197,7 @@
 .products-page .products .product-card .product-img {
   position: relative;
   width: 273px;
-  height: 405px;
+  height: 408px;
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -205,7 +205,7 @@
   border: 1px solid #e7e6e6;
 }
 
-.products-page .products .product-img .product-sale {
+/* .products-page .products .product-img .product-sale {
   margin: 10px;
   width: 90px;
   height: 30px;
@@ -221,7 +221,7 @@
   font-weight: 600;
   line-height: 21px;
   color: #ffffff;
-}
+} */
 
 .products-page .products .product-card .product-desc {
   margin-top: 10px;
@@ -524,12 +524,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 150px;
 }
 .products-page .chosen-product .chosen-product-slider {
   width: 48%;
-  height: 640px;
+  height: auto;
   background: #ffffff;
   box-shadow: 9px 13px 14px 5px rgba(0, 0, 0, 0.25),
     inset -1px 2px 10px 3px rgba(0, 0, 0, 0.25);
@@ -540,7 +540,7 @@
   --swiper-navigation-color: #fff;
   --swiper-pagination-color: #fff;
   width: 100%;
-  height: 1020px;
+  height: 750px;
 }
 .products-page
   .chosen-product
@@ -548,9 +548,11 @@
   .swiper-area
   .slider-image {
   width: 100%;
-  height: 100%;
+  height: 110%;
   object-fit: cover;
+  display: block;
 }
+
 .products-page .chosen-product .chosen-product-info {
   padding: 30px 40px;
   width: 49%;
@@ -640,6 +642,7 @@
   line-height: 22px;
   color: #000000;
 }
+
 .products-page .chosen-product .button-box {
   width: 100%;
   height: auto;
@@ -647,18 +650,41 @@
   align-items: center;
   justify-content: center;
 }
-.products-page .chosen-product .button-box button {
+
+.products-page .chosen-product .button-box .shop-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
   width: 230px;
   height: 44px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
+  padding: 0 16px;
+
+  border: 0.3px solid #666666;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #3d3d3d, #2e2e2e);
+  color: #ffffff;
   font-size: 15px;
-  line-height: 22px;
-  color: #f8f8ff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
+
+.products-page .chosen-product .button-box .shop-btn:hover {
+  background: linear-gradient(135deg, #263646);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
 .products-page .chosen-product .title {
-  font-family: "Dancing Script";
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
