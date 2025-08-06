@@ -1,0 +1,132 @@
+.footer-container {
+  width: 100%;
+  display: flex;
+  background: radial-gradient(
+    262.08% 96.79% at 92.47% 17.92%,
+    #1d1d1d 0%,
+    #121212 100%
+  );
+  background-size: cover;
+}
+
+.foot-desc-txt {
+  margin-top: 20px;
+  font-family: "Roboto Serif";
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+  color: #acabab;
+}
+
+.sns-context {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.sns-context a img {
+  width: 29px;
+  height: 29px;
+  transition: transform 0.2s ease;
+}
+
+.sns-context a img:hover {
+  transform: scale(1.2); /* hoverda biroz kattalashadi */
+}
+
+.foot-category-title {
+  width: 200px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ebeaea;
+}
+
+.foot-category-link {
+  margin-top: 20px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 170px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 34px;
+}
+
+.foot-category-link a {
+  color: #c5c8c9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.find-us {
+  display: flex;
+  flex-direction: row;
+}
+
+.find-us span {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 34px;
+  color: #e2e2e2;
+}
+
+.find-us div {
+  margin-left: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34px;
+  color: #c5c8c9;
+}
+
+.copyright-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.copyright-txt div {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  color: #e2e2e2;
+}
+
+.copyright-txt span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  color: #e2e2e2;
+  cursor: pointer;
+}
+
+.foot-category-title:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #d7b686;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.foot-category-title:hover:after {
+  transform: scaleX(1);
+}
