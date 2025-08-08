@@ -26,7 +26,7 @@ export default function HelpPage() {
       <Container className={"help-container"}>
         <TabContext value={value}>
           <Box className={"help-menu"}>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Box>
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -74,8 +74,10 @@ export default function HelpPage() {
                 <Stack className={"admin-letter-box"}>
                   <Stack className={"admin-letter-container"}>
                     <Box className={"admin-letter-frame"}>
-                      <span>Contact us!</span>
-                      <p>Fill out below form to send a message!</p>
+                      <span>Contact Us</span>
+                      <p>
+                        Please fill out the form below to send us a message.
+                      </p>
                     </Box>
                     <form
                       action={"#"}
@@ -110,7 +112,11 @@ export default function HelpPage() {
                         justifyContent={"flex-end"}
                         sx={{ mt: "30px" }}
                       >
-                        <Button type={"submit"} variant="contained">
+                        <Button
+                          className={"send-btn"}
+                          type={"submit"}
+                          variant="contained"
+                        >
                           Send
                         </Button>
                       </Box>

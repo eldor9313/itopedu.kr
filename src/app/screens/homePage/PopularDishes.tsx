@@ -66,9 +66,18 @@ export default function PopularDishes() {
                         >
                           <Typography
                             level="h2"
-                            fontSize="lg"
-                            textColor="#fff"
-                            mb={1}
+                            sx={{
+                              fontSize: "1.125rem",
+                              fontWeight: 600,
+                              color: "#fff",
+                              mb: 0,
+                              lineHeight: 1.3,
+                              letterSpacing: "-0.2px",
+                              textShadow: "0 1px 2px rgba(0,0,0,0.4)", // biroz kontrast uchun
+                              whiteSpace: "nowrap",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                            }}
                           >
                             {product.productName}
                           </Typography>
@@ -99,7 +108,7 @@ export default function PopularDishes() {
                           py: 1.5,
                           px: "var(--Card-padding)",
                           borderTop: "1px solid",
-                          height: "53px",
+                          height: "50px",
                         }}
                       >
                         <Typography

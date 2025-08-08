@@ -163,7 +163,7 @@ export function Settings() {
         </div>
       </Box>
       <Box className={"save-box"}>
-        <Button variant={"contained"} onClick={handSubmitHandler}>
+        <Button className={"save-btn"} onClick={handSubmitHandler}>
           Save
         </Button>
       </Box>

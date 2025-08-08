@@ -8,6 +8,8 @@ import { useHistory } from "react-router-dom";
 import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 import { MemberType } from "../../../lib/enums/member.enum";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { Phone } from "@mui/icons-material";
 import "../../../css/userPage.css";
 
 export default function UserPage() {
@@ -51,6 +53,7 @@ export default function UserPage() {
                           ? "/icons/restaurant.svg"
                           : "/icons/user-badge.svg"
                       }
+                      className={"order-user-prof-img"}
                     />
                   </div>
                 </div>
@@ -60,10 +63,38 @@ export default function UserPage() {
                 <span className={"order-user-prof"}>
                   {authMember?.memberType}
                 </span>
-                <span className={"order-user-prof"}>
-                  {authMember?.memberAddress
-                    ? authMember.memberAddress
-                    : "no address"}
+                <Box className={"linear"}></Box>
+                <span className={"order-user-phone"}>
+                  <div style={{ display: "flex" }}>
+                    <Phone
+                      style={{
+                        fontSize: 24,
+                        color: "#616164",
+                        marginRight: "5px",
+                      }}
+                    />
+                  </div>
+                  <p className={"user-phone-number"}>
+                    {authMember?.memberPhone
+                      ? authMember?.memberPhone
+                      : "no description"}
+                  </p>
+                </span>
+                <span className={"order-user-address"}>
+                  <div style={{ display: "flex" }}>
+                    <LocationOnIcon
+                      style={{
+                        fontSize: 24,
+                        color: "#616164",
+                        marginRight: "5px",
+                      }}
+                    />
+                  </div>
+                  <span className={"spec-address-txt"}>
+                    {authMember?.memberAddress
+                      ? authMember.memberAddress
+                      : "no address"}
+                  </span>
                 </span>
               </Box>
               <Box className={"user-media-box"}>

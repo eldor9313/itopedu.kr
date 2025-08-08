@@ -1,32 +1,72 @@
 .help-page {
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   display: flex;
-  background: #f8f8ff;
+  justify-content: center;
+  background: #f9fafc;
+  padding: 40px 16px;
 }
 
 .help-page .help-container {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .help-page .help-menu {
-  width: 100%;
   height: 60px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #f8f8ff;
+  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
-.help-page .help-menu .table-list {
+.help-page .help-menu .table_list {
+  min-width: 300px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.help-menu .table_list .MuiTabs-flexContainer {
+  gap: 30px;
+}
+
+.help-menu .table_list .MuiTab-root {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  text-transform: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.help-menu .table_list .MuiTab-root:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.help-menu .table_list .Mui-selected {
+  color: #222 !important;
+  font-weight: 600;
+}
+
+.help-menu .table_list .MuiTabs-indicator {
+  background-color: #222;
+  height: 3px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .help-page .css-1gsv261 {
-  width: 75%;
+  width: 100%;
 }
 
 .help-page .css-heg063-MuiTabs-flexContainer {
@@ -39,144 +79,129 @@
 
 .help-page .help-main-content {
   width: 100%;
-  height: 1000px;
-}
-
-.help-page .rules-box {
-  padding: 24px;
-  width: 100%;
-  height: auto;
+  min-height: 800px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #f8f8ff;
-  border: 1px solid #ededed;
-  box-shadow: 0px 20px 30px rgba(25, 25, 46, 0.04);
-  border-radius: 8px;
+  gap: 32px;
 }
 
-.rules-box .rules-frame {
+.help-page .rules-box,
+.help-page .admin-letter-box {
+  padding: 32px;
   width: 100%;
-  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e3e4e6;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+.rules-box .rules-frame,
+.admin-letter-box .admin-letter-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .rules-box .rules-frame p {
-  border-bottom: 1px solid #dddddd;
-  color: #000000;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #2d2d2d;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: 0.00938em;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .help-page .accordion-menu {
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.help-page .admin-letter-box {
-  padding: 60px;
-  width: 100%;
-  height: auto;
+.admin-letter-frame span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #1a1a2e;
+}
+
+.admin-letter-frame p {
+  margin-top: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #4f547b;
+}
+
+.admin-letter-frame .admin-input-box {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+}
+
+.admin-letter-frame .admin-input-box label {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #2d2d39;
+}
+
+.admin-letter-frame .admin-input-box input,
+.admin-letter-frame .admin-input-box textarea {
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-letter-frame .admin-input-box input:focus,
+.admin-letter-frame .admin-input-box textarea:focus {
+  outline: none;
+  border-color: #5e5d5d;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.admin-letter-frame .admin-input-box textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.admin-letter-frame .send-btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #f8f8ff;
-  border: 1px solid #ededed;
-  box-shadow: 0px 20px 30px rgba(25, 25, 46, 0.04);
-  border-radius: 8px;
-}
 
-.help-page .admin-letter-box .admin-letter-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+  width: 130px;
+  height: 44px;
+  padding: 0 20px;
 
-.help-page .admin-letter-container .admin-letter-frame {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
+  background: #021c3a;
+  color: #ffffff;
+  border: 0.3px solid #666666;
+  border-radius: 999px;
 
-.help-page .admin-letter-frame span {
-  font-family: "ABeeZee";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  color: #140342;
-}
-
-.help-page .admin-letter-frame p {
-  margin-top: 20px;
-  font-family: "Sedan";
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
-  line-height: 26px;
-  color: #4f547b;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.help-page .admin-letter-container .admin-letter-frame {
-  display: flex;
-  flex-direction: column;
-}
-
-.help-page .admin-letter-frame .admin-input-box {
-  margin-top: 30px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.help-page .admin-letter-frame .admin-input-box label {
-  font-family: "Verdana";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #140342;
-}
-
-.help-page .admin-letter-frame .admin-input-box input {
-  margin-top: 10px;
-  padding: 20px;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  background: #f8f8ff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  font-family: "Verdana";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
-  color: #4f547b;
-}
-
-.help-page .admin-letter-frame .admin-input-box textarea {
-  margin-top: 10px;
-  padding: 20px;
-  width: 100%;
-  height: 150px;
-  display: flex;
-  background: #f8f8ff;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
-  font-family: "Verdana";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 26px;
-  color: #4f547b;
+.admin-letter-frame .send-btn:hover {
+  background: #15181d;
+  transform: translateY(-2px);
 }

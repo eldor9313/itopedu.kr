@@ -109,7 +109,7 @@ export default function ProcessOrders(props: ProcessOrdersProps) {
                   className={"verify-button"}
                   onClick={finishOrderHandler}
                 >
-                  Confirm Payment
+                  Payment
                 </Button>
               </Box>
             </Box>
