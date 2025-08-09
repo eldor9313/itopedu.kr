@@ -26,9 +26,10 @@ export enum ProductStatus {
 export enum ProductCollection {
   SUIT = "SUIT",
   SHIRT = "SHIRT",
-  TSHIRT = "TSHIRT",
+  TSHIRT = "T-SHIRT",
   OUTERWEAR = "OUTERWEAR",
   SHOES = "SHOES",
   ACCESORY = "ACCESORY",
   TUXEDOS = "TUXEDOS",
+  WATCH = "WATCH",
 }

@@ -172,20 +172,6 @@ export default function Products(props: ProductsProps) {
                   className="btn"
                   variant={"contained"}
                   color={
-                    productSearch.productCollection === ProductCollection.SHIRT
-                      ? "primary"
-                      : "secondary"
-                  }
-                  onClick={() =>
-                    searchCollectionHandler(ProductCollection.SHIRT)
-                  }
-                >
-                  Shirt
-                </Button>
-                <Button
-                  className="btn"
-                  variant={"contained"}
-                  color={
                     productSearch.productCollection ===
                     ProductCollection.OUTERWEAR
                       ? "primary"
@@ -196,6 +182,20 @@ export default function Products(props: ProductsProps) {
                   }
                 >
                   Outerwear
+                </Button>
+                <Button
+                  className="btn"
+                  variant={"contained"}
+                  color={
+                    productSearch.productCollection === ProductCollection.SHIRT
+                      ? "primary"
+                      : "secondary"
+                  }
+                  onClick={() =>
+                    searchCollectionHandler(ProductCollection.SHIRT)
+                  }
+                >
+                  Shirt
                 </Button>
                 <Button
                   className="btn"
@@ -239,6 +239,20 @@ export default function Products(props: ProductsProps) {
                   }
                 >
                   Accesory
+                </Button>
+                <Button
+                  className="btn"
+                  variant={"contained"}
+                  color={
+                    productSearch.productCollection === ProductCollection.WATCH
+                      ? "primary"
+                      : "secondary"
+                  }
+                  onClick={() =>
+                    searchCollectionHandler(ProductCollection.WATCH)
+                  }
+                >
+                  Watches
                 </Button>
 
                 <FormControl
