@@ -80,6 +80,7 @@
   height: 50px;
   border-radius: 24px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .home-navbar a {

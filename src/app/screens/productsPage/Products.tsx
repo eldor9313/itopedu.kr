@@ -157,6 +157,21 @@ export default function Products(props: ProductsProps) {
                   className="btn"
                   variant={"contained"}
                   color={
+                    productSearch.productCollection ===
+                    ProductCollection.TUXEDOS
+                      ? "primary"
+                      : "secondary"
+                  }
+                  onClick={() =>
+                    searchCollectionHandler(ProductCollection.TUXEDOS)
+                  }
+                >
+                  Tuxedos
+                </Button>
+                <Button
+                  className="btn"
+                  variant={"contained"}
+                  color={
                     productSearch.productCollection === ProductCollection.SHIRT
                       ? "primary"
                       : "secondary"
@@ -180,22 +195,21 @@ export default function Products(props: ProductsProps) {
                     searchCollectionHandler(ProductCollection.OUTERWEAR)
                   }
                 >
-                  Outer
+                  Outerwear
                 </Button>
                 <Button
                   className="btn"
                   variant={"contained"}
                   color={
-                    productSearch.productCollection ===
-                    ProductCollection.TROUSER
+                    productSearch.productCollection === ProductCollection.TSHIRT
                       ? "primary"
                       : "secondary"
                   }
                   onClick={() =>
-                    searchCollectionHandler(ProductCollection.TROUSER)
+                    searchCollectionHandler(ProductCollection.TSHIRT)
                   }
                 >
-                  Trouser
+                  T-Shirt
                 </Button>
                 <Button
                   className="btn"
@@ -226,21 +240,7 @@ export default function Products(props: ProductsProps) {
                 >
                   Accesory
                 </Button>
-                <Button
-                  className="btn"
-                  variant={"contained"}
-                  color={
-                    productSearch.productCollection ===
-                    ProductCollection.UNDERWEAR
-                      ? "primary"
-                      : "secondary"
-                  }
-                  onClick={() =>
-                    searchCollectionHandler(ProductCollection.UNDERWEAR)
-                  }
-                >
-                  Essentials
-                </Button>
+
                 <FormControl
                   variant="outlined"
                   size="small"
