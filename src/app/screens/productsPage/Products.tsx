@@ -396,19 +396,19 @@ export default function Products(props: ProductsProps) {
         <Stack className={"logo-box"}>
           <Box className={"logo-img"}>
             <img src="/img/Dubai.jpg" alt="" />
-            <Box className={"store-location"}>Dubai Mall, Dubai</Box>
+            <Box className={"store-location"}>Dubai Mall, Dubai, 3 floors</Box>
           </Box>
           <Box className={"logo-img"}>
             <img src="/img/Coex1.jpg" alt="" />
-            <Box className={"store-location"}>COEX Mall, Seoul</Box>
+            <Box className={"store-location"}>COEX Mall, Seoul, B1 floors</Box>
           </Box>
           <Box className={"logo-img"}>
             <img src="/img/Gum.jpg" alt="" />
-            <Box className={"store-location"}>GUM, Moscow</Box>
+            <Box className={"store-location"}>GUM, Moscow, 2 floors</Box>
           </Box>
           <Box className={"logo-img"}>
             <img src="/img/Tashkent.jpg" alt="" />
-            <Box className={"store-location"}>Nest One, Tashkent</Box>
+            <Box className={"store-location"}>Nest One, Tashkent, 5 floors</Box>
           </Box>
         </Stack>
       </div>

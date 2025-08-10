@@ -38,7 +38,7 @@ export default function HomePage() {
         page: 1,
         limit: 4,
         order: "productViews",
-        productCollection: ProductCollection.SUIT,
+        // productCollection: ProductCollection.SUIT,
       })
       .then((data) => {
         setPopularDishes(data);

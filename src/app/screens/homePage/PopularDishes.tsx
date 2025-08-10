@@ -73,7 +73,7 @@ export default function PopularDishes() {
                               mb: 0,
                               lineHeight: 1.3,
                               letterSpacing: "-0.2px",
-                              textShadow: "0 1px 2px rgba(0,0,0,0.4)", // biroz kontrast uchun
+                              textShadow: "0 1px 2px rgba(0,0,0,0.4)",
                               whiteSpace: "nowrap",
                               overflow: "hidden",
                               textOverflow: "ellipsis",
