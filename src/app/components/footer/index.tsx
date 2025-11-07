@@ -78,9 +78,9 @@ export default function Footer() {
                 <Box>
                   <Box className={"foot-category-title"}>Shop by</Box>
                   <Box className={"foot-category-link"}>
-                    <Link to="/">Suits</Link>
-                    <Link to="/">Shirts</Link>
-                    <Link to="/">Trousers</Link>
+                    <Link to="/">Suit</Link>
+                    <Link to="/">Outerwear</Link>
+                    <Link to="/">Shirt</Link>
                     <Link to="/">Shoes</Link>
                     <Link to="/">Accesories</Link>
                   </Box>
