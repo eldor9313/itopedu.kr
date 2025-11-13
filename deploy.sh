@@ -9,4 +9,4 @@ npm i yarn -g
 yarn global add serve
 yarn 
 yarn run build
-pm2 start start.js --name "CAVALIER-REACT"
+pm2 start "yarn run start:prod" --name=CAVALIER-REACT
