@@ -1,0 +1,564 @@
+.branchBackdrop {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(20, 45, 80, 0.22) !important;
+}
+
+.branchPaper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100% - 32px, 770px);
+  max-height: 95vh;
+  overflow: hidden;
+  border-radius: 32px;
+  outline: none;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 245, 255, 0.98) 0%,
+    rgba(221, 236, 251, 0.96) 100%
+  );
+  border: 1px solid rgba(88, 144, 212, 0.16);
+  box-shadow:
+    0 30px 80px rgba(47, 95, 158, 0.18),
+    0 10px 30px rgba(47, 95, 158, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.branchPaper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(107, 176, 255, 0.22),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at left top,
+      rgba(255, 255, 255, 0.72),
+      transparent 30%
+    );
+  pointer-events: none;
+}
+
+.branchPaperInner {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 95vh;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(70, 120, 180, 0.35) transparent;
+}
+
+.branchPaperInner::-webkit-scrollbar {
+  width: 8px;
+}
+
+.branchPaperInner::-webkit-scrollbar-thumb {
+  background: rgba(70, 120, 180, 0.28);
+  border-radius: 999px;
+}
+
+.branchHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+  padding: 6px 2px 0;
+}
+
+.branchHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.branchFlag {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+
+  border: 1px solid rgba(47, 95, 158, 0.12);
+  box-shadow:
+    0 10px 24px rgba(47, 95, 158, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.branchTitleWrap {
+  min-width: 0;
+}
+
+.branchKicker {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5f7fa8;
+}
+
+.branchTitle {
+  margin: 0;
+  font-size: clamp(1.55rem, 2vw, 2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1e4370;
+}
+
+.branchSubtitle {
+  margin: 6px 0 0;
+  max-width: 520px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #5a7596;
+}
+
+.branchCloseBtn {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px !important;
+  color: #55749b !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+  border: 1px solid rgba(96, 140, 196, 0.14);
+  box-shadow: 0 8px 20px rgba(47, 95, 158, 0.08);
+  transition: all 0.25s ease !important;
+}
+
+.branchCloseBtn:hover {
+  transform: translateY(-2px);
+  color: #1f4f86 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 12px 24px rgba(47, 95, 158, 0.14);
+}
+
+.branchGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.branchCard {
+  position: relative;
+  border-radius: 22px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(107, 155, 210, 0.14);
+  box-shadow:
+    0 10px 28px rgba(47, 95, 158, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.branchCard:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 34px rgba(47, 95, 158, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.branchCardFull {
+  grid-column: 1 / -1;
+}
+
+.branchLabel {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6a88ae;
+}
+
+.branchValue {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #234a77;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.branchPhoneLink,
+.branchEmailLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #234a77;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.branchPhoneLink:hover,
+.branchEmailLink:hover {
+  color: #2b6cb0;
+  transform: translateX(2px);
+}
+
+.phoneIcon,
+.emailIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.branchSectionTitle {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #1f4c7d;
+}
+
+.branchSocials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.branchSocialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 8px 11px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: #315b88;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(105, 150, 205, 0.15);
+  box-shadow:
+    0 8px 20px rgba(47, 95, 158, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.22s ease;
+}
+
+.branchSocialLink:hover {
+  transform: translateY(-3px);
+  color: #1e4370;
+  background: #ffffff;
+  border-color: rgba(58, 120, 192, 0.28);
+  box-shadow:
+    0 14px 28px rgba(47, 95, 158, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.socialImg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.branchMapWrap {
+  overflow: hidden;
+  margin-top: 8px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(105, 150, 205, 0.14);
+  box-shadow:
+    0 14px 32px rgba(47, 95, 158, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.branchMap {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  display: block;
+}
+
+.branchFooter {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.branchFooter .MuiButton-root {
+  flex: 1;
+  min-height: 45px;
+}
+
+.branchBtnPrimary {
+  border-radius: 16px !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2f5f9e 0%, #4c88cc 100%) !important;
+  box-shadow:
+    0 14px 30px rgba(47, 95, 158, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.branchBtnPrimary:hover {
+  background: linear-gradient(135deg, #28548d 0%, #3f79ba 100%) !important;
+  transform: translateY(-1px);
+  box-shadow:
+    0 18px 34px rgba(47, 95, 158, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+.branchBtnSecondary {
+  border-radius: 16px !important;
+  text-transform: none !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #315b88 !important;
+  border: 1px solid rgba(105, 150, 205, 0.22) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 10px 20px rgba(47, 95, 158, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.branchBtnSecondary:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(58, 120, 192, 0.3) !important;
+}
+
+/* DARK MODE */
+body.dark .branchBackdrop {
+  background: rgba(5, 15, 30, 0.52) !important;
+}
+
+body.dark .branchPaper {
+  background: linear-gradient(
+    145deg,
+    rgba(12, 27, 48, 0.98) 0%,
+    rgba(18, 39, 68, 0.98) 100%
+  );
+  border: 1px solid rgba(118, 170, 235, 0.14);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .branchPaper::before {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(86, 150, 230, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at left top,
+      rgba(255, 255, 255, 0.04),
+      transparent 30%
+    );
+}
+
+body.dark .branchPaperInner {
+  scrollbar-color: rgba(124, 173, 235, 0.3) transparent;
+}
+
+body.dark .branchPaperInner::-webkit-scrollbar-thumb {
+  background: rgba(124, 173, 235, 0.3);
+}
+
+body.dark .branchFlag {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(124, 173, 235, 0.16);
+}
+
+body.dark .branchKicker {
+  color: #8cb9ef;
+}
+
+body.dark .branchTitle {
+  color: #eef6ff;
+}
+
+body.dark .branchSubtitle {
+  color: #b8cbe0;
+}
+
+body.dark .branchCloseBtn {
+  color: #c8daf0 !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(124, 173, 235, 0.14);
+}
+
+body.dark .branchCloseBtn:hover {
+  color: #ffffff !important;
+  background: rgba(124, 173, 235, 0.12) !important;
+}
+
+body.dark .branchCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(124, 173, 235, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+body.dark .branchLabel {
+  color: #8cb9ef;
+}
+
+body.dark .branchValue,
+body.dark .branchPhoneLink,
+body.dark .branchEmailLink {
+  color: #eef6ff;
+}
+
+body.dark .branchSectionTitle {
+  color: #eef6ff;
+}
+
+body.dark .branchSocialLink {
+  color: #d7e8fb;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(124, 173, 235, 0.14);
+}
+
+body.dark .branchSocialLink:hover {
+  color: #ffffff;
+  background: rgba(95, 152, 223, 0.14);
+  border-color: rgba(124, 173, 235, 0.28);
+}
+
+body.dark .branchMapWrap {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(124, 173, 235, 0.12);
+}
+
+body.dark .branchBtnPrimary {
+  background: linear-gradient(135deg, #3d7ed1 0%, #67a2ea 100%) !important;
+}
+
+body.dark .branchBtnSecondary {
+  color: #d7e8fb !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(124, 173, 235, 0.16) !important;
+}
+
+body.dark .branchBtnSecondary:hover {
+  background: rgba(124, 173, 235, 0.12) !important;
+  border-color: rgba(124, 173, 235, 0.28) !important;
+}
+
+@media (max-width: 768px) {
+  .branchPaper {
+    width: min(100% - 18px, 720px);
+    max-height: 92vh;
+    border-radius: 24px;
+  }
+
+  .branchPaperInner {
+    padding: 18px;
+    max-height: 92vh;
+  }
+
+  .branchHeader {
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .branchHeaderLeft {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .branchFlag {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+  }
+
+  .branchTitle {
+    font-size: 1.35rem;
+  }
+
+  .branchSubtitle {
+    min-width: 260px;
+    font-size: 9px;
+  }
+
+  .branchGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .branchCard {
+    padding: 2px 14px;
+    border-radius: 18px;
+  }
+
+  .branchSocials {
+    gap: 10px;
+  }
+
+  .branchSocialLink {
+    width: 180px;
+    justify-content: flex-start;
+  }
+
+  .branchMap {
+    height: 200px;
+  }
+
+  .branchFooter {
+    flex-direction: column;
+  }
+
+  .branchFooter .MuiButton-root {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .branchPaper {
+    width: min(100% - 12px, 100%);
+    border-radius: 20px;
+  }
+
+  .branchPaperInner {
+    padding: 14px;
+  }
+
+  .branchHeaderLeft {
+    gap: 12px;
+  }
+
+  .branchFlag {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+  }
+
+  .branchKicker {
+    font-size: 10px;
+  }
+
+  .branchTitle {
+    font-size: 1.16rem;
+  }
+
+  .branchValue {
+    font-size: 14px;
+  }
+
+  .branchCloseBtn {
+    width: 40px;
+    height: 40px;
+  }
+}

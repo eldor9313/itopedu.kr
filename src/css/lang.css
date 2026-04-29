@@ -1,0 +1,159 @@
+.lang-dropdown {
+  position: relative;
+  width: 130px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  z-index: 5000;
+}
+
+/* 🔥 GLASS SELECT */
+.lang-dropdown .selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 6px 8px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lang-dropdown .selected:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* FLAG */
+.lang-dropdown .flag {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ARROW */
+.arrow {
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* 🔥 GLASS DROPDOWN — About sahifada kontent ustida qolishi uchun yuqori z-index */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  min-width: 148px;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(59, 130, 246, 0.35);
+
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.22);
+  animation: fadeIn 0.25s ease;
+
+  z-index: 6000;
+}
+
+/* ITEMS */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.25s;
+
+  color: #1e2a4a;
+}
+
+/* hover glow */
+.item:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* active */
+.item.active {
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================
+   DARK MODE - LANG DROPDOWN
+========================= */
+
+body.dark .lang-dropdown .selected {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  color: #e5eefc;
+}
+
+body.dark .lang-dropdown .selected:hover {
+  background: rgba(30, 41, 59, 0.62);
+  border-color: rgba(147, 197, 253, 0.42);
+}
+
+body.dark .lang-dropdown .selected .arrow,
+body.dark .lang-dropdown .selected svg {
+  color: #cfe3ff;
+}
+
+body.dark .lang-dropdown .dropdown {
+  background: rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.4);
+}
+
+body.dark .lang-dropdown .item {
+  color: #e2e8f0;
+}
+
+body.dark .lang-dropdown .item:hover {
+  background: rgba(96, 165, 250, 0.14);
+}
+
+body.dark .lang-dropdown .item.active {
+  background: rgba(96, 165, 250, 0.2);
+  color: #f8fbff;
+  font-weight: 600;
+}
+
+body.dark .lang-dropdown .flag {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
