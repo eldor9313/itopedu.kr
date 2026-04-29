@@ -205,7 +205,7 @@ export const branchData: BranchType[] = [
     youtube: "https://www.youtube.com/@itop_edu",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4873.856526943244!2d79.85277747581782!3d6.893538218750928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bde85d9645f%3A0xea1ae792f1aaf0e1!2sUnity%20Plaza!5e1!3m2!1sru!2skr!4v1776388184350!5m2!1sru!2skr",
-    gallery: ["/img/branch/sriLanka.png"],
+    gallery: ["/img/branch/srilanka.png"],
   },
   {
     key: "bangladesh",
