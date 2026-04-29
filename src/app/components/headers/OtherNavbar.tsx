@@ -102,11 +102,11 @@ export default function OtherNavbar() {
           </Stack>
         </Stack>
         <Stack className="other-toys">
-          <img src={process.env.PUBLIC_URL + "img/toys/03.png"} alt="" />
+          {/* <img src={process.env.PUBLIC_URL + "img/toys/03.png"} alt="" />
           {/* <Box className="center-title">
             A trusted study abroad specialist with years of proven experience.
           </Box> */}
-          <img src={process.env.PUBLIC_URL + "img/toys/01.png"} alt="" />
+          {/* <img src={process.env.PUBLIC_URL + "img/toys/01.png"} alt="" /> */}
         </Stack>
       </Container>
     </div>
