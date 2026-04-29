@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/itopedu/static/css/main.4c00ad1f.css",
-    "main.js": "/itopedu/static/js/main.e11365b2.js",
-    "static/js/787.1f4fc4e2.chunk.js": "/itopedu/static/js/787.1f4fc4e2.chunk.js",
-    "index.html": "/itopedu/index.html",
-    "main.4c00ad1f.css.map": "/itopedu/static/css/main.4c00ad1f.css.map",
-    "main.e11365b2.js.map": "/itopedu/static/js/main.e11365b2.js.map",
-    "787.1f4fc4e2.chunk.js.map": "/itopedu/static/js/787.1f4fc4e2.chunk.js.map"
+    "main.css": "/itopedu.kr/static/css/main.4c00ad1f.css",
+    "main.js": "/itopedu.kr/static/js/main.eaa670be.js",
+    "static/js/787.1f4fc4e2.chunk.js": "/itopedu.kr/static/js/787.1f4fc4e2.chunk.js",
+    "index.html": "/itopedu.kr/index.html",
+    "main.4c00ad1f.css.map": "/itopedu.kr/static/css/main.4c00ad1f.css.map",
+    "main.eaa670be.js.map": "/itopedu.kr/static/js/main.eaa670be.js.map",
+    "787.1f4fc4e2.chunk.js.map": "/itopedu.kr/static/js/787.1f4fc4e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4c00ad1f.css",
-    "static/js/main.e11365b2.js"
+    "static/js/main.eaa670be.js"
   ]
 }
